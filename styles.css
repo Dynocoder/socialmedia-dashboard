@@ -1,0 +1,268 @@
+:root {
+  /* General Variables */
+  --dark-grey: hsl(228, 12%, 44%);
+  --light-grey: hsl(227, 47%, 96%);
+  --heading-clr: hsl(230, 17%, 14%);
+
+  /* Card Variables */
+  --card-bg: hsl(222, 50%, 96%);
+  --card-bg-active: hsl(232, 33%, 91%);
+  
+
+
+  --body-bg: hsl(0, 0%, 100%);
+
+
+  /* Toggle color light inactive */
+  --toggle-bg-inactive: hsl(230, 22%, 74%);
+}
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+position: relative;
+display: inline-block;
+width: 45px;
+height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: var(--toggle-bg-inactive);
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 2px;
+background-color: var(--body-bg);
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+/* toggle left */
+input:checked + .slider {
+background-color: var(--toggle-bg-inactive);
+}
+
+input:checked + .slider:hover {
+  background-image: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(21px);
+-ms-transform: translateX(21px);
+transform: translateX(21px);
+}
+
+.slider:hover {
+  background-image: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+  
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+  /* *************************My Code******************* */
+
+/* Body */
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: "Inter";
+  background-color: var(--body-bg);
+  color: var(--heading-clr);
+}
+
+p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Slider switch */
+.toggle-dark > p{
+  padding: 10px;
+  color: var(--dark-grey);
+  font-weight: 700;
+}
+
+
+/* Nav Bar */
+.nav-title {
+display: flex;
+flex-direction: column;
+}
+.nav-title h1 {
+  margin-bottom: 10px;
+}
+.nav-title p {
+  margin-top: 0;
+  color: var(--dark-grey);
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.toggle-dark {
+display: flex;
+align-items: center;
+
+}
+
+
+
+
+/* Social Grid */
+
+#social-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content:space-between;
+gap: 2%;
+margin-bottom: 30px;
+
+}
+
+.card {
+  display: block;
+  min-width: 220px;
+  min-height: 220px;
+  width: 23%;
+  height: 20%;
+  background-color: var(--card-bg);
+  margin-bottom: 20px;
+  
+  border-radius: 2%;
+}
+.card h1 {
+  margin-bottom: 0;
+}
+.card p {
+  margin-top: 0;
+}
+
+.card:hover {
+  background-color: var(--card-bg-active);
+}
+
+
+/* Card Border Tops */
+.card:nth-of-type(1) {
+  border-top: 5px solid hsl(208, 92%, 53%);
+}.card:nth-of-type(2) {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}.card:nth-of-type(3) {
+  content: "";
+  border-top: 5px solid;
+  /* border-top: 2px; */
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+  
+}.card:nth-of-type(4) {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+
+/* Card-text */
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+
+/* card text divs */
+.card-text > div:nth-of-type(1) > p {
+  margin: 0;
+  display: inline-block;
+  color: var(--dark-grey);
+}
+.card-text > div:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+
+
+/* card text div 2 */
+.card-text > div:nth-of-type(2) > p {
+  color: var(--dark-grey);
+  font-weight: 400;
+}
+.card-text > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-shrink: 1;
+  
+}
+
+
+
+
+
+/* Card text div 3 */
+.card-text > div:nth-of-type(3) > p {
+  margin: 0;
+  display: inline-block;
+  color: hsl(163, 72%, 41%);
+  
+
+}
+.card-text > div:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.card > div:first-of-type > p {
+    display: block;
+}
+
+
+/* last card Today red */
+.card:last-of-type > .card-text > div:last-of-type > p {
+  color: hsl(356, 69%, 56%);
+}
