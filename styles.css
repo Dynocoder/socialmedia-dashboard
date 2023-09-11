@@ -163,8 +163,8 @@ margin-bottom: 30px;
   display: block;
   min-width: 220px;
   min-height: 220px;
-  width: 23%;
-  height: 20%;
+  width: 23em;
+  height: 20em;
   background-color: var(--card-bg);
   margin-bottom: 20px;
   
